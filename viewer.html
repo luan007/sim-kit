@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Rubik';
+        }
+    </style>
+</head>
+
+<body>
+    <div id='app'>
+        <!-- <div class='header'></div> -->
+        <div class='main'>
+            <div class='toolbar'>
+                <div class="header">
+                    <div class='center'><b>Toolkit</b></div>
+                </div>
+                <div class="tools">
+                    <div class='tool-btn' v-on:click="create(tool)" v-for="tool in tools">
+                        <div class="icon">
+                            <i v-bind:class="tool.cl"></i>
+                        </div>
+                        <span>
+                            {{tool.name}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class='editor'>
+                <div class="fill">
+                    <div class="header">
+                        <div>Demo Project /</div>
+                    </div>
+                    <div class="editor-container">
+                        <canvas id='editor'></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class='right'>
+                <div class="properties">
+                    <div class="header">
+                        <div>Properties</div>
+                    </div>
+                </div>
+                <div class="sim">
+                    <div class="header">
+                        <div>FPS Simulator View</div>
+                    </div>
+                    <div id="threeView">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class='status'>
+            <div>Server is running</div>
+        </div>
+
+    </div>
+    <script src="./src/main.js"></script>
+</body>
+
+</html>

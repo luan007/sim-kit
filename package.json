@@ -1,0 +1,23 @@
+{
+  "name": "proj-paddle-cube",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.6.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fabric": "^4.1.0",
+    "jsdom": "^16.4.0",
+    "serve-static": "^1.14.1",
+    "three": "^0.120.0"
+  },
+  "devDependencies": {
+    "less": "^3.12.2"
+  }
+}

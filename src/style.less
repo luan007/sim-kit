@@ -1,0 +1,152 @@
+#app {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.header {
+    width: 100%;
+    // height: 50px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    color: #333;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    > * {
+        font-weight: 400;
+        margin-left: 20px;
+        align-content: center;
+    }
+    > .center {
+        margin: 0;
+        width: 100%;
+        text-align: center;;
+    }
+}
+
+.main {
+    flex-grow: 1;
+    height: 100%;
+
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    .toolbar {
+        height: 100%;
+        width: 100px;
+        background: #eee;
+        display: flex;
+        flex-direction: column;
+
+        .tools {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            justify-items: center;
+        }
+
+        .tool-btn:hover {
+            background: #222;
+            cursor:pointer;
+            color: white;
+        }
+        .tool-btn {
+            width: 100%;
+            word-wrap: break-word;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            text-align: center;
+            .icon {
+                padding: 2px;
+                padding-bottom: 5px;
+                font-size: 1.2em;
+            }
+            span {
+                display: inline-block;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+    }
+    .editor {
+        position: relative;
+        flex-grow: 1;
+        .editor-container {
+            width: 100%;
+            height: 100%;
+            > div {
+                position: absolute !important;
+            }
+        }
+    }
+    .right {
+
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        
+        width: 400px;
+        border-left: 1px solid #ccc;
+        .properties {
+            flex-grow: 1;
+        }
+
+        .sim {
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+            .header {
+                border-top: 1px solid #ccc;
+            }
+            #threeView {
+                height: 100%;
+                canvas {
+                    position: absolute;
+                }
+            }
+        }
+    }
+
+}
+
+.status {
+    height: 30px;
+    background: #eee;
+    border-top: 1px solid #ccc;
+
+    > * {
+        font-weight: 400;
+        margin-left: 20px;
+        align-content: center;
+    }
+    > .center {
+        margin: 0;
+        width: 100%;
+        text-align: center;;
+    }
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    color: #666;
+    align-items: center;
+}
+
+
+.fill {
+    position: absolute;
+    // height:100%;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
